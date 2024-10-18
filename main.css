@@ -1,0 +1,7 @@
+body {
+    background: radial-gradient(circle, rgb(0, 0, 0), rgb(80, 0, 0));
+}
+
+.Box100 {
+    width: 100%
+}

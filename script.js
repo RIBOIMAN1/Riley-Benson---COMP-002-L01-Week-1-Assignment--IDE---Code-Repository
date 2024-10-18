@@ -16,7 +16,6 @@ function copyText() {
     var textBox = document.getElementById("myTextBox");
     textBox.select();
     textBox.setSelectionRange(0, 99999); 
-
     navigator.clipboard.writeText(textBox.value)
         .then(() => {
             alert("Copied the text: " + textBox.value);
@@ -25,3 +24,11 @@ function copyText() {
             alert("Failed to copy text: " + err);
         });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const textBox = document.getElementById('myTextBox');
+    textBox.addEventListener('input', function() {
+        textBox.style.height = 'auto';
+        textBox.style.height = (textBox.scrollHeight) + 'px';
+    });
+});
